@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>09 登记表三级结构 × 页面时间层</title>
+<style>
+  :root { color-scheme: light; }
+  body { margin: 0; background: #f9f9f7; color: #0b0b0b; font: 14px/1.6 system-ui, -apple-system, "PingFang SC", sans-serif; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 20px 60px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: #52514e; font-size: 13px; margin-bottom: 18px; }
+  .card { background: #fcfcfb; border: 1px solid rgba(11,11,11,0.10); border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; }
+  .card h2 { font-size: 14.5px; margin: 0 0 8px; }
+  ol { margin: 0; padding-left: 20px; }
+  li { margin: 4px 0; }
+  img { max-width: 100%; height: auto; display: block; border: 1px solid rgba(11,11,11,0.10); border-radius: 8px; }
+  .meta { color: #75736e; font-size: 12px; margin-top: 8px; }
+  code { background: rgba(11,11,11,0.05); border-radius: 4px; padding: 1px 5px; font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>09 登记表三级结构（L1→L2→L3）× 页面时间层</h1>
+  <div class="sub">数据来源：09-数据口径登记表 v4.37 逐行实测解析（47 行全量）；时间层 = 市场全景.html 实际放置。只描述结构，不构成买入依据。</div>
+
+  <div class="card">
+    <h2>怎么读（从左到右四列）</h2>
+    <ol>
+      <li><b>L1 六领域</b>：股票 22 / 债券 7 / 外汇 2 / 商品 2 / 衍生品 6 / 宏观 8（行数）</li>
+      <li><b>L2 市场</b>：仅 股票（A股 19·港股 1·美股 2）与 宏观（中国·金融 2·中国·实体 1·美国 3·对外 2）有显式 L2；债券/外汇/商品/衍生品登记表未拆，图记为「(未拆L2)」</li>
+      <li><b>L3 = 47 个 M 行</b>逐行列出（M 编号 + 指标组名）——这是页面上原来看不见的一级</li>
+      <li><b>页面时间层</b>：总览 hero 7 / 月度层 11 / 周度层 11 / 日度层 11 / 未上页 7</li>
+    </ol>
+    <div class="meta">正交的含义：L1/L2/L3 是登记表的静态归属（每行挂一棵树）；时间层是页面的动态组织（同一 L1 的行被摊到多层）。每条从 L3 流向右侧的线都是一次「拆散」。</div>
+  </div>
+
+  <div class="card">
+    <h2>映射图</h2>
+    <img src="https://mdn.alipayobjects.com/one_clip/afts/img/Z_xGTrwzBhYAAAAAgBAAAAgAoEACAQFr/original" alt="L1→L2→L3→时间层 桑基图">
+    <div class="meta">生成：chart-visualization (GPT-Vis) · 桑基 · 2026-11-04。已知近似：M22/M23/M24c 等「一行两格」只记主位；M8 QVIX 在登记表挂两次（1.1 与 5.2），图中合并为一个节点、流出 2。</div>
+  </div>
+
+  <div class="card">
+    <h2>未上页 7 行（登记表已收、页面未放）</h2>
+    <div>M34 盈利预期（P1）· M43 连板梯队（待 ladder 建成）· M37 行业涨跌分布 · M41 M36 交叉验证 · M27 原油/铜/螺纹 · M15 股指期货期限结构 · M32 商品期货</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市场全景 · 导航</title>
+<style>
+  :root { color-scheme: light dark; --muted: #595959; --line: rgba(128,128,128,0.35); }
+  @media (prefers-color-scheme: dark) { :root { --muted: #a8a8a8; --line: rgba(128,128,128,0.45); } }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    max-width: 560px; margin: 12vh auto 0; padding: 0 24px;
+    color: #1a1a1a; background: #ffffff; line-height: 1.6;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e8e8e8; background: #161616; } }
+  h1 { font-size: 22px; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 4px; }
+  .sub { font-size: 13.5px; color: var(--muted); margin-bottom: 28px; }
+  a.card {
+    display: block; text-decoration: none; color: inherit;
+    border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px 16px; margin-bottom: 10px;
+  }
+  a.card:hover { border-color: rgba(128,128,128,0.7); }
+  a.card b { font-size: 15px; font-weight: 600; }
+  a.card span { display: block; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .foot { font-size: 12px; color: var(--muted); margin-top: 26px; }
+</style>
+</head>
+<body>
+<h1>市场全景</h1>
+<div class="sub">个人市场环境仪表盘 · 静态快照版</div>
+<a class="card" href="市场全景.html"><b>市场全景</b><span>盘面 / 债券 / 外汇 / 商品 / 衍生品 / 宏观 · 按时间层或按领域查看</span></a>
+<a class="card" href="登记表-结构映射.html"><b>登记表结构映射</b><span>09 数据口径登记表 → 页面的四层映射（L1 → L2 → L3 → 时间层）</span></a>
+<div class="foot">只描述环境，不构成买入依据。数据口径见各页标注。</div>
+</body>
+</html>
